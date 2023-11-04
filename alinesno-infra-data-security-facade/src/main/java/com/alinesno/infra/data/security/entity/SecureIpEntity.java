@@ -1,5 +1,8 @@
 package com.alinesno.infra.data.security.entity;
 
+import com.gitee.sunchenbin.mybatis.actable.annotation.ColumnComment;
+import com.gitee.sunchenbin.mybatis.actable.annotation.ColumnType;
+import lombok.Data;
 import com.alinesno.infra.common.facade.mapper.entity.InfraBaseEntity;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.annotation.TableField;
@@ -11,63 +14,38 @@ import com.baomidou.mybatisplus.annotation.TableField;
  * @version 1.0.0
  */
 @TableName("secure_ip")
+@Data
 public class SecureIpEntity extends InfraBaseEntity {
 
     /**
      * IP地址
      */
     @TableField("ip")
+	@ColumnType(length=255)
+	@ColumnComment("IP地址")
     private String ip;
 
     /**
      * 用户标识
      */
     @TableField("account_token")
+	@ColumnType(length=255)
+	@ColumnComment("用户标识")
     private String accountToken;
 
     /**
      * 状态
      */
     @TableField("status")
+	@ColumnType(length=255)
+	@ColumnComment("状态")
     private String status;
 
     /**
      * 备注
      */
     @TableField("remarks")
+	@ColumnType(length=255)
+	@ColumnComment("备注")
     private String remarks;
-
-    // 省略getter和setter方法
-
-    public String getIp() {
-        return ip;
-    }
-
-    public void setIp(String ip) {
-        this.ip = ip;
-    }
-
-    public String getAccountToken() {
-        return accountToken;
-    }
-
-    public void setAccountToken(String accountToken) {
-        this.accountToken = accountToken;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public String getRemarks() {
-        return remarks;
-    }
-
-    public void setRemarks(String remarks) {
-        this.remarks = remarks;
-    }
 }

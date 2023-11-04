@@ -1,5 +1,8 @@
 package com.alinesno.infra.data.security.entity;
 
+import com.gitee.sunchenbin.mybatis.actable.annotation.ColumnComment;
+import com.gitee.sunchenbin.mybatis.actable.annotation.ColumnType;
+import lombok.Data;
 import com.alinesno.infra.common.facade.mapper.entity.InfraBaseEntity;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.annotation.TableField;
@@ -11,54 +14,29 @@ import com.baomidou.mybatisplus.annotation.TableField;
  * @version 1.0.0
  */
 @TableName("balanced")
+@Data
 public class BalancedEntity extends InfraBaseEntity {
 
     @TableField("name")
+	@ColumnType(length=255)
+	@ColumnComment("name")
     private String name;
 
     @TableField("group_code")
+	@ColumnType(length=255)
+	@ColumnComment("groupCode")
     private String groupCode;
 
     @TableField("load_uri")
+	@ColumnType(length=255)
+	@ColumnComment("loadUri")
     private String loadUri;
 
     /**
      * 备注
      */
     @TableField("remarks")
+	@ColumnType(length=255)
+	@ColumnComment("备注")
     private String remarks;
-
-    // 省略getter和setter方法
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getGroupCode() {
-        return groupCode;
-    }
-
-    public void setGroupCode(String groupCode) {
-        this.groupCode = groupCode;
-    }
-
-    public String getLoadUri() {
-        return loadUri;
-    }
-
-    public void setLoadUri(String loadUri) {
-        this.loadUri = loadUri;
-    }
-
-    public String getRemarks() {
-        return remarks;
-    }
-
-    public void setRemarks(String remarks) {
-        this.remarks = remarks;
-    }
 }
