@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-    	<groupId>com.alinesno.infra.data</groupId>
+    	<groupId>com.alinesno.infra.base</groupId>
     	<artifactId>alinesno-infra-data-security-parent</artifactId>
 		<version>${revision}</version>
 		<relativePath>../pom.xml</relativePath>
@@ -12,6 +12,11 @@
 
 	<artifactId>alinesno-infra-data-security-boot</artifactId>
 	<packaging>jar</packaging>
+
+	<properties>
+		<docker.base.images>registry.cn-shenzhen.aliyuncs.com/alinesno-infra-base/openjdk:17.0.2-jdk</docker.base.images>
+		<docker.user>root</docker.user>
+	</properties>
 
 	<dependencies>
 
@@ -22,19 +27,36 @@
 			<version>${revision}</version>
 		</dependency>
 		<dependency>
-			<groupId>com.alinesno.infra.data</groupId>
+			<groupId>com.alinesno.infra.base</groupId>
+			<artifactId>alinesno-infra-data-security-core</artifactId>
+			<version>${revision}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.alinesno.infra.base</groupId>
 			<artifactId>alinesno-infra-data-security-domain</artifactId>
 			<version>${revision}</version>
 		</dependency>
 		<dependency>
-			<groupId>com.alinesno.infra.data</groupId>
+			<groupId>com.alinesno.infra.base</groupId>
 			<artifactId>alinesno-infra-data-security-adapter</artifactId>
 			<version>${revision}</version>
 		</dependency>
 		<dependency>
-			<groupId>com.alinesno.infra.data</groupId>
-			<artifactId>alinesno-infra-data-security-gateway</artifactId>
+			<groupId>com.alinesno.infra.base</groupId>
+			<artifactId>alinesno-infra-data-security-api</artifactId>
 			<version>${revision}</version>
+		</dependency>
+
+		<!--Mysql数据库驱动-->
+		<dependency>
+			<groupId>com.mysql</groupId>
+			<artifactId>mysql-connector-j</artifactId>
+			<version>8.0.33</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.httpcomponents.client5</groupId>
+			<artifactId>httpclient5</artifactId>
 		</dependency>
 
 		<dependency>

@@ -436,7 +436,7 @@ const screenJsonList = [
         "prodStatus": "normal",
         "identityStatus": null,
         "tenantId": "0",
-        "name": "数据安全服务",
+        "name": "AIP智能设施",
         "hasRecommend": 1,
         "applicationId": null,
         "shortName": null
@@ -447,7 +447,7 @@ const screenJsonList = [
         "sortNumber": 14,
         "hasStatus": 0,
         "productBrief": null,
-        "linkPath": "http://alinesno-config.beta.linesno.com",
+        "linkPath": "http://alinesno-authority.beta.linesno.com",
         "deleteManager": null,
         "itemStatus": null,
         "fieldProp": null,

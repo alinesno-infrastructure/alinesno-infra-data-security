@@ -4,7 +4,6 @@ import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
 import { getToken } from '@/utils/auth'
 import { isHttp } from '@/utils/validate'
-import { getParam } from '@/utils/ruoyi'
 import { isRelogin } from '@/utils/request'
 import useUserStore from '@/store/modules/user'
 import useSettingsStore from '@/store/modules/settings'
@@ -12,11 +11,10 @@ import usePermissionStore from '@/store/modules/permission'
 
 NProgress.configure({ showSpinner: false });
 
-const whiteList = ['login', '/register' , '/sso/login'];
+const whiteList = ['/login', '/register' , '/sso/login'];
 
 router.beforeEach((to, from, next) => {
   NProgress.start()
-
   if (getToken()) {
     to.meta.title && useSettingsStore().setTitle(to.meta.title)
     /* has token*/
@@ -58,7 +56,6 @@ router.beforeEach((to, from, next) => {
       NProgress.done()
     }
   }
-
 })
 
 router.afterEach(() => {

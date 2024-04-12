@@ -11,7 +11,7 @@
 export default {
   data () {
     return {
-      currentApplicationName: '数据安全服务'
+      currentApplicationName: '网关配置服务'
     }
   },
   mounted () {
