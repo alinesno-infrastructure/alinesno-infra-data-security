@@ -18,7 +18,7 @@
 								<span>6.示例：</span><br/>
 								<span>&nbsp;&nbsp;a.服务URL示例：http://server:port、http://server.com、lb://xxx ,支持但不推荐：http://server:port/api.do。</span><br/>
 								<span>&nbsp;&nbsp;b.断言Path示例：/route/producer/** 或 /producer/api。</span><br/>
-								<span>&nbsp;&nbsp;c.断言Host示例：**.my.com 或 my.com 、127.0.0.1:8771。</span><br/>
+								<span>&nbsp;&nbsp;c.断言Host示例：**.my.com 或 my.com 、127.0.0.1:38771。</span><br/>
 								<span>&nbsp;&nbsp;d.断言RemoteAddr示例：192.168.1.1 或 192.168.1.1/100。</span><br/>
 								<span>&nbsp;&nbsp;e.重定向RewritePath示例：/foo/(?&lt;segment&gt;.*),/$\{segment}，需满足java正则表达示或参见官方。</span><br/>
 								<span>&nbsp;&nbsp;f.断言Header示例：Header=X-Request-Id, \d+，其中\d+表示正则匹配的任意值，需满足java正则表达示或参见官方。</span><br/>

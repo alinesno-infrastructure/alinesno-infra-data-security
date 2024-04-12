@@ -33,7 +33,7 @@ package com.alinesno.infra.base.gateway.proxy.gateway.rest;//package com.flying.
 //    private TestService testService;
 //
 //    @RequestMapping("/test")
-//    @CrossOrigin(origins = {"http://localhost:8771", "null"})
+//    @CrossOrigin(origins = {"http://localhost:38771", "null"})
 //    public Mono<String> test() {
 //        log.info("test started");
 //        return Mono.fromFuture(testService.simulateIOTest());

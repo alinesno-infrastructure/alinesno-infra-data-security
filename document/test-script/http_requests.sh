@@ -27,7 +27,7 @@ do
         start_time=$(date +%s%N)
 
         # 发送 GET 请求到指定 URL，并将响应保存到临时文件
-        curl -sS -o /dev/null -w "%{time_total}\n" http://127.0.0.1:8771/demo44/prod-api/getRouters
+        curl -sS -o /dev/null -w "%{time_total}\n" http://127.0.0.1:38771/demo44/prod-api/getRouters
 
         # 记录结束时间
         end_time=$(date +%s%N)

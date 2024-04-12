@@ -23,7 +23,7 @@ public class FallbackController {
      * 触发熔断机制的回调方法
      * @return
      */
-    @CrossOrigin(origins = {"http://localhost:8771", "null"})
+    @CrossOrigin(origins = {"http://localhost:38771", "null"})
     @RequestMapping(value = "/fallback", method = {RequestMethod.GET,RequestMethod.POST})
     public ApiResult fallback(@RequestParam(required = false) String routeId) {
         log.warn("触发熔断机制的回调方法:fallback,routeId={}", routeId);
@@ -34,7 +34,7 @@ public class FallbackController {
      * 触发自定义熔断机制的回调方法
      * @return
      */
-    @CrossOrigin(origins = {"http://localhost:8771", "null"})
+    @CrossOrigin(origins = {"http://localhost:38771", "null"})
     @RequestMapping(value = "/fallback/custom", method = {RequestMethod.GET,RequestMethod.POST})
     public ApiResult fallbackCustom(@RequestParam String routeId) {
         log.warn("触发自定义熔断机制的回调方法:fallback,routeId={}", routeId);

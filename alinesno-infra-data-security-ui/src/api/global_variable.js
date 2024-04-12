@@ -3,9 +3,9 @@
 // 专门放置 全局变量
 
 //const 声明常量,注意此处在webpack.config.js中做了代理转发
-let baseHost = "localhost:30107"
+let baseHost = "localhost:30205"
 let baseURL = "http://"+baseHost+""
-let gatewayRoutesURL = "http://127.0.0.1:8771"
+let gatewayRoutesURL = "http://127.0.0.1:38771"
 const errMsg = "操作失败"
 let successMsg = "操作成功"
 let contentType = "application/json;charset=UTF-8"

@@ -1,5 +1,5 @@
 server:
-  port: 8771
+  port: 38771
   address: 0.0.0.0
 
 spring:
@@ -11,7 +11,7 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:mysql://localhost:3306/dev_alinesno_infra_base_gateway_v100?serverTimezone=GMT%2B8&zeroDateTimeBehavior=CONVERT_TO_NULL
+    url: jdbc:mysql://localhost:3306/dev_alinesno_infra_data_security_v100?serverTimezone=GMT%2B8&zeroDateTimeBehavior=CONVERT_TO_NULL
     username: root
     password: adminer
     maxActive: 20

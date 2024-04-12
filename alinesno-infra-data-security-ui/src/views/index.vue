@@ -5,7 +5,7 @@
       <el-col :span="24">
         <div class="aip-appinfo-header">
           <div class="header-icon-banner">
-            <i class="fa-solid fa-masks-theater"></i>
+            <i class="fa-solid fa-file-shield"></i>
           </div>
           <div class="icon">
             <div class="title">
@@ -46,7 +46,7 @@ import OperationWorkspaceService from './operation-workspace/service.vue'
 
 
 const currentEnvClusterObj = ref({
-  appName : '微服务统一网关服务'  , 
+  appName : '数据接口安全服务'  , 
   clusterName: 'SpringCloudGateway版本'  , 
   apiServerUrl: 'http://portal.infra.linesno.com'
 }) 
